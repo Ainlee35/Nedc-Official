@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEDC Company Profile 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      scroll-behavior: smooth;
+      font-size: 1rem;
+      color: #333;
+    }
+    /* Footer link effects */
+footer a {
+  position: relative;
+  display: inline-block;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Ripple effect */
+footer a::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(46,194,223,0.5) 20%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+footer a:hover::before {
+  width: 200px;
+  height: 200px;
+}
+
+/* Underline animation */
+footer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: #2EC2DF;
+  transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+  width: 100%;
+}
+
+    /* Navbar initially white (on top of hero images) */
+.navbar {
+  transition: background-color 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: white !important;
+}
+.navbar.scrolled {
+  background-color: #fff !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+  color: black !important;
+}
+
+    /* About Section Fixes */
+#about .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#about .row {
+  align-items: stretch; /* ensures equal height cards in a row */
+}
+
+#about h2 {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Adjust spacing on smaller devices */
+@media (max-width: 768px) {
+  #about .card {
+    margin-bottom: 20px;
+  }
+}
+
+    h1, h2, h3, h4, h5, h6, .navbar-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #2EC2DF;
+    }
+    p, li, a, button, input, textarea {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    /* Underline animation for navbar links */
+.navbar .nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0%;
+  height: 2px;
+  background-color: #2EC2DF; /* Brand color */
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+/* Dropdown hover styles */
+.dropdown-menu .dropdown-item {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Ripple effect */
+.dropdown-item::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(46,194,223,0.4) 20%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.dropdown-item:hover::before {
+  width: 200px;
+  height: 200px;
+}
+
+/* Underline animation for dropdown links */
+.dropdown-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 0%;
+  height: 2px;
+  background-color: #2EC2DF;
+  transition: width 0.3s ease;
+}
+
+.dropdown-item:hover::after {
+  width: 100%;
+}
+
+    /* Ensure carousel images look good on all screens */
+#newsCarousel img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  #newsCarousel img {
+    height: 300px; /* reduce height on tablets */
+  }
+  .carousel-caption {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #newsCarousel img {
+    height: 220px; /* smaller height on mobile */
+  }
+  .carousel-caption {
+    bottom: 10px;
+    font-size: 0.8rem;
+  }
+  .carousel-caption h5 {
+    font-size: 1rem;
+  }
+}
+
+    /* Navbar Scroll Effect */
+    .navbar {
+      transition: background-color 0.4s ease, box-shadow 0.4s ease;
+      background-color: transparent !important;
+    }
+    .navbar.scrolled {
+      background-color: #ffffff !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .navbar .nav-link {
+      font-weight: 600;
+    }
+  .hero {
+  position: relative;
+  margin-top: 0;
+
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+    #newsCarousel img {
+  height: 500px;
+  object-fit: cover;
+}
+.carousel-caption {
+  animation: fadeInUp 1.2s ease-in-out;
+}
+.hero-slide {
+  height: 100vh; /* Full viewport height */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.55);
+    }
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      animation: fadeInDown 1.5s;
+    }
+    .btn-light, .btn-success {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover, .btn-success:hover {
+  color: #fff !important;
+  background: linear-gradient(45deg, #2EC2DF, #00a8cc);
+  box-shadow: 0 0 15px rgba(46,194,223,0.6);
+}
+.hero-slide, .about-card, .stat-card, .leader-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slide::after, .about-card::after, .stat-card::after, .leader-img::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(46,194,223,0.4); /* Brand color overlay */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hero-slide:hover::after,
+.about-card:hover::after,
+.stat-card:hover::after,
+.leader-img:hover::after {
+  opacity: 1;
+}
+.color-hover {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.color-hover::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(46,194,223,0.6) 10%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  border-radius: 50%;
+}
+
+.color-hover:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+    .hero p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      animation: fadeInUp 2s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .stat-card {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    .stat-card.show {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.8s ease;
+    }
+    .fade-section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+    .fade-section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .impact-section {
+      background: #2EC2DF; /* Custom brand color */
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      color: white;
+    }
+    .impact-section h2, .impact-section h3, .impact-section p {
+      color: #fff;
+    }
+    /* Mouse-move ripple effect */
+.color-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.color-hover::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(46,194,223,0.6) 15%, transparent 60%);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.color-hover:hover::before {
+  width: 200px;
+  height: 200px;
+}
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .social-icons a {
+      color: #ccc;
+      font-size: 1.2rem;
+      margin-right: 10px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #2EC2DF;
+    }
+    .quote-box {
+      background: #f1f5f9;
+      border-left: 5px solid #2EC2DF;
+      padding: 20px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+    .leader-img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%; /* Rounded frame */
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+   
+    .leader-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .vision-mission-card, .core-value-card {
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .vision-mission-card:hover, .core-value-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    /* ===== Responsive Adjustments ===== */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .leader-img {
+        height: 180px;
+        width: 180px;
+      }
+      .impact-section h3 {
+        font-size: 1.8rem;
+      }
+    }
+@media (max-width: 768px) {
+  .hero-slide {
+    height: 80vh; /* slightly smaller on tablets */
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-slide {
+    height: 70vh; /* compact on phones */
+  }
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+}
+.hero-box {
+  background: rgba(0, 0, 0, 0.35); /* lighter opacity, lets image shine through */
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 12px;
+  margin-top: 20px;
+  max-width: 700px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 1.2s ease forwards;
+}
+
+.hero-box p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.hero-box .btn {
+  margin-top: 15px;
+  background-color: #2EC2DF;
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.hero-box .btn:hover {
+  background-color: #009bb7;
+  box-shadow: 0 0 12px rgba(46,194,223,0.6);
+}
+
+/* Slide-in animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-box p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.hero-box .btn {
+  margin-top: 15px;
+  background-color: #2EC2DF;
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.hero-box .btn:hover {
+  background-color: #009bb7;
+  box-shadow: 0 0 12px rgba(46,194,223,0.6);
+}
+
+    @media (max-width: 576px) {
+      .hero {
+        padding: 100px 15px;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 0.95rem;
+      }
+      .quote-box {
+        font-size: 0.9rem;
+        padding: 15px;
+      }
+      .hero {
+  position: relative;
+}
+.hero-slide {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.55);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 800px;
+  animation: fadeInUp 2s;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  animation: fadeInDown 1.5s;
+}
+.hero-content p {
+  font-size: 1.25rem;
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.45); /* subtle dark box for contrast */
+  color: #fff !important;          /* force text to stay white */
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6); /* extra clarity */
+}
+
+      .impact-section h2 {
+        font-size: 1.5rem;
+      }
+      .impact-section h3 {
+        font-size: 1.5rem;
+      }
+      .leader-img {
+        height: 150px;
+        width: 150px;
+      }
+    }
+    .navbar-brand img {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+  .nav-logo {
+  height: 70px;   /* enlarged from 45px */
+  max-height: 80px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+  .navbar-brand img {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+/* Preloader overlay */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff; /* background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Hide when done */
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Logo styling */
+.preloader-logo {
+  width: 120px;
+  height: auto;
+  animation: pulse 2s infinite;
+}
+
+/* Circle animation */
+.loader-circle {
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #2EC2DF; /* brand color */
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animations */
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.1); opacity: 0.7; }
+}
+
+
+  </style>
+</head>
+<!-- Loading Page
+<div id="preloader">
+  <div class="preloader-content">
+    <img src="logo.png" alt="Loading..." class="preloader-logo">
+    <div class="loader-circle"></div>
+  </div>
+</div> -->
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+    <div class="container">
+  <a class="navbar-brand" href="index.html">
+  <img src="nedc_lg-removebg-preview.png" alt="NEDC Logo" class="nav-logo">
+</a>
+
+</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about new.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+             <ul class="dropdown-menu">
+  <li><a class="dropdown-item color-hover" href="about new.html">Vision & Mission</a></li>
+  <li><a class="dropdown-item color-hover" href="board new.html">Board & Advisory Council</a></li>
+</ul>
+
+
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#programs" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+            <ul class="dropdown-menu" aria-labelledby="programsDropdown">
+              <li><a class="dropdown-item color-hover" href="programs.html">BongoFursa Show</a></li>
+          <li><a class="dropdown-item color-hover" href="COMING SOON.html">BongoFursa App</a></li>
+              <li><a class="dropdown-item color-hover"href="coming soon.html">Innovation Hub</a></li>
+              <li><a class="dropdown-item color-hover" href="COMING SOON.html">Youth Insurance</a></li>
+              <li><a class="dropdown-item color-hover" href="COMING SOON.html">Innovation Awards</a></li>
+              <li><a class="dropdown-item color-hover"href="COMING SOON.html">BLY Syllabus</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link color-hover" href="#membership">Membership</a></li>
+         <!-- <li class="nav-item"><a class="nav-link color-hover">Events</a></li>
+          <li class="nav-item"><a class="nav-link color-hover">Documents</a></li>-->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Slideshow -->
+<!-- Hero Slideshow -->
+<section class="hero">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="10000">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="hero-slide" style="background-image:url('Frame\ 11.png');">
+          <div class="hero-overlay"></div>
+          <div class="container text-center hero-content">
+          <div class="hero-box">
+            <p class="lead">A trusted space where entrepreneurs can access finance, skills, and mentorship.</p>
+            <a href="Membership form.html" class="btn btn-light btn-lg mt-3">Become a Member</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="hero-slide" style="background-image:url('Frame\ 10.png');">
+          <div class="hero-overlay"></div>
+          <div class="container text-center hero-content">
+        <div class="hero-box">
+            <p class="lead">A credible partner where donors and government can invest with confidence, knowing that funds will be managed with transparency and impact.</p>
+            <a href="Membership form.html" class="btn btn-light btn-lg mt-3">Become a Member</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="hero-slide" style="background-image:url('Frame\ 9.png');">
+          <div class="hero-overlay"></div>
+          <div class="container text-center hero-content">
+          <div class="hero-box">
+            <p class="lead">A hub for innovation where technology meets enterprise, and ideas become sustainable businesses.</p>
+            <a href="Membership form.html" class="btn btn-light btn-lg mt-3">Become a Member</a></div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- News & Events Section -->
+<section id="news" class="py-5 fade-section bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">News & Events</h2>
+    <div id="newsCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-inner rounded shadow-lg">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <img src="slide1.jpg" class="d-block w-100" alt="Event 1">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+            <h5>NEDC Annual Conference 2025</h5>
+            <p>Gathering entrepreneurs, investors, and policymakers to drive Africa’s transformation.</p>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <img src="slide 3.jpg" class="d-block w-100" alt="Event 2">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+            <h5>Innovation Hub Launch</h5>
+            <p>Empowering startups with tools, mentorship, and funding opportunities.</p>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <img src="slide 2.jpg" class="d-block w-100" alt="Event 3">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+            <h5>Creating The Future</h5>
+            <p>Supporting Youth Ideas to become their living reality.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- About Section -->
+  <section id="about" class="py-5 fade-section">
+    <div class="container">
+      <h2 class="text-center mb-4">About NEDC</h2>
+      <p class="text-center">The National Enterprise and Development Chamber (NEDC) drives innovation by connecting entrepreneurs, startups, and enterprises across Tanzania and beyond. We champion bold ideas and strong relationships, offering support at every level—from local communities to national platforms. Focused on startups and fresh innovations, NEDC provides resources, guidance, and networks to turn ideas into impact. As a trusted voice in enterprise development, we empower micro, small, and medium businesses and help shape an inclusive, sustainable economic future. At the National Enterprise and Development Chamber (NEDC), we provide practical solutions and strategic support to build strong, sustainable enterprises across Tanzania and beyond. Our mission is to turn potential into performance by unlocking access to resources, building entrepreneurial capacity, and driving inclusive growth. We work with startups, SMEs, youth, investors, and ecosystem partners to ensure that innovation leads to real impact. Here’s how we make it happen:</p>
+      <div class="row mt-4">
+        <section id="vision-mission" class="py-5 fade-section">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Vision & Mission</h2>
+    <div class="row g-4">
+      <!-- Vision Card -->
+      <div class="col-md-6">
+        <div class="card vision-mission-card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-eye fa-2x text-primary mb-3"></i>
+            <h5 class="card-title fw-bold">Vision</h5>
+            <p class="card-text">
+              To become Africa’s premier platform for uniting visionary entrepreneurs 
+              and high-impact investors in a redefined, trusted, and transformative environment.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Mission Card -->
+      <div class="col-md-6">
+        <div class="card vision-mission-card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-bullseye fa-2x text-success mb-3"></i>
+            <h5 class="card-title fw-bold">Mission</h5>
+            <p class="card-text">
+              NEDC is committed to accelerating economic growth by bridging the gap between enterprise 
+              and capital through strategic networking, premium events, and world-class advisory support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CEO & Chairman Quotes 
+  <section class="py-5 fade-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Leadership</h2>
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6 text-center">
+          <img src="ceo.jpg" alt="CEO" class="leader-img mb-3">
+          <div class="quote-box">
+            <p>“NEDC is more than an institution; it is a movement to transform Tanzania’s entrepreneurial landscape.”</p>
+            <h6 class="mt-3">- CEO, National Enterprise & Development Chamber</h6>
+          </div>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="chairman.png" alt="Chairman" class="leader-img mb-3">
+          <div class="quote-box">
+            <p>“Our mission is to ensure no idea, no dream, and no talent is wasted.”</p>
+            <h6 class="mt-3">- Chairman, NEDC Board</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>-->
+  <!-- Membership Section -->
+  <section id="membership" class="py-5 fade-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Membership Plans</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="stat-card text-center shadow-sm">
+            <h5>Silver</h5>
+            <p class="fw-bold">TZS 100,000 / year</p>
+            <p>Startups and youth-led businesses</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card text-center shadow-sm">
+            <h5>Gold</h5>
+            <p class="fw-bold">TZS 750,000 / year</p>
+            <p>SMEs and growing companies</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card text-center shadow-sm">
+            <h5>Platinum</h5>
+            <p class="fw-bold">TZS 2,000,000 / year</p>
+            <p>Corporates and strategic partners</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section id="impact" class="impact-section py-5 fade-section">
+    <div class="container text-center">
+      <h2 class="mb-5">Our Impact</h2>
+      <div class="row text-center g-4">
+        <div class="col-md-3">
+          <h3 class="counter" data-target="50000">0</h3>
+          <p>Jobs Enabled</p>
+        </div>
+        <div class="col-md-3">
+          <h3 class="counter" data-target="10000">0</h3>
+          <p>MSMEs Formalized</p>
+        </div>
+        <div class="col-md-3">
+          <h3 class="counter" data-target="120">0</h3>
+          <p>Finance Mobilized (Billion TZS)</p>
+        </div>
+        <div class="col-md-3">
+          <h3 class="counter" data-target="30000">0</h3>
+          <p>Entrepreneurs Trained</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 fade-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <form class="mx-auto" style="max-width:600px">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+        </div>
+        <button class="btn btn-success w-100">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>NEDC</h5>
+          <p>National Enterprise & Development Chamber</p>
+        </div>
+        <div class="col-md-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+  <li><a href="about new.html" class="text-white color-hover">About Us</a></li>
+  <li><a href="programs.html" class="text-white color-hover">Programs</a></li>
+  <li><a href="board new.html" class="text-white color-hover">Board & Advisory Council</a></li>
+  <li><a href="index.html#membership" class="text-white color-hover">Membership</a></li>
+  <li><a href="index.html#impact" class="text-white color-hover">Impact</a></li>
+  <li><a href="index.html#contact" class="text-white color-hover">Contact</a></li>
+</ul>
+
+        </div>
+        <div class="col-md-4">
+          <h6>Contact</h6>
+          <p class="text-white color-hover">Email: info@nedc.or.tz</p>
+          <p class="text-white color-hover">Phone: +255654 700 444</p>
+          <div class="social-icons mt-2">
+            <a href="#"><i class="text-white color-hover"></i></a>
+            <a href="#"><i class="text-white color-hover"></i></a>
+            <a href="#"><i class="text-white color-hover"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <small>© 2025 NEDC - All Rights Reserved</small>
+      </div>
+    </div>
+  </footer>
+<script>
+  // Force preloader for 10 seconds
+  window.addEventListener("load", function() {
+    setTimeout(() => {
+      document.body.classList.add("loaded");
+    }, 10000); // 10000ms = 10 seconds
+  });
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+  // Navbar color change on scroll
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+  });
+document.querySelectorAll('.color-hover').forEach(el => {
+  el.addEventListener('mousemove', e => {
+    let rect = el.getBoundingClientRect();
+    el.style.setProperty('--x', `${e.clientX - rect.left}px`);
+    el.style.setProperty('--y', `${e.clientY - rect.top}px`);
+  });
+});
+
+    // Navbar scroll effect
+    window.addEventListener("scroll", function() {
+      const navbar = document.querySelector(".navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+
+document.querySelectorAll('.color-hover').forEach(el => {
+  el.addEventListener('mousemove', e => {
+    let rect = el.getBoundingClientRect();
+    el.style.setProperty('--x', `${e.clientX - rect.left}px`);
+    el.style.setProperty('--y', `${e.clientY - rect.top}px`);
+  });
+});
+document.querySelectorAll('.color-hover').forEach(el => {
+  el.addEventListener('mousemove', e => {
+    let rect = el.getBoundingClientRect();
+    el.style.setProperty('--x', `${e.clientX - rect.left}px`);
+    el.style.setProperty('--y', `${e.clientY - rect.top}px`);
+  });
+});
+
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-section, .stat-card').forEach(el => observer.observe(el));
+
+    // Animated counters
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // smaller = faster
+
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          const updateCount = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = Math.ceil(target / speed);
+
+            if(count < target){
+              counter.innerText = count + increment;
+              setTimeout(() => updateCount(counter), 20);
+            } else {
+              counter.innerText = target.toLocaleString();
+            }
+          };
+          updateCount(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
+
+    counters.forEach(c => counterObserver.observe(c));
+
+  </script>
+</body>
+</html>

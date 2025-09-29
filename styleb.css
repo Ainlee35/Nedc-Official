@@ -1,0 +1,373 @@
+/* =========================
+   Bongo Fursa — styles.css
+   Animated program bar + responsive layout
+   Replace fonts/images in /assets as instructed in comments
+   ========================= */
+
+/* ========== Fonts ========== */
+/* Put the actual .woff2 files in assets/fonts and update filenames if needed. */
+@font-face {
+  font-family: "Petrov Sans";
+  src: url("assets/fonts/PetrovSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Petrov Sans";
+  src: url("assets/fonts/PetrovSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Baloo 2";
+  src: url("assets/fonts/Baloo2-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* If you don't have Petrov Sans, the fonts below will be used as fallbacks */
+:root{
+  --color-blue: #4861AB;
+  --color-orange: #F79753;
+  --color-coral: #F16549;
+  --color-black: #231F20;
+  --color-white: #FFFFFF;
+
+  --bg: #fff;
+  --muted: #6b7280;
+
+  --radius: 12px;
+  --container: 1100px;
+}
+
+/* Global resets */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Petrov Sans", "Baloo 2", Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--color-black);
+  background: linear-gradient(180deg,#fff 0%, #fbfdff 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+   h1, h2, h3, h4, h5, h6, .navbar-brand {
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+color: #2EC2DF;
+}
+p, li, a, button, input, textarea {
+font-family: 'Open Sans', sans-serif;
+font-size: 1rem;
+line-height: 1.6;
+}
+    /* Navbar Scroll Effect */
+    .vision-mission-card {
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.vision-mission-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+    .navbar {
+      transition: background-color 0.4s ease, box-shadow 0.4s ease;
+      background-color: transparent !important;
+    }
+    .navbar.scrolled {
+      background-color: #ffffff !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+/* Container */
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* Header / Program bar */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:60;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.80), rgba(255,255,255,0.60));
+  border-bottom: 1px solid rgba(35,31,32,0.04);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:14px 0;
+}
+
+/* Brand */
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  text-decoration:none;
+}
+.brand-logo{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+  display:block;
+  transform-origin:center;
+  transition: transform .6s cubic-bezier(.2,.9,.2,1);
+}
+.brand:hover .brand-logo{ transform: rotate(-6deg) scale(1.03); }
+.brand-text{
+  font-weight:700;
+  font-size:18px;
+  color:var(--color-black);
+}
+
+/* Program bar menu */
+.program-bar{ display:flex; align-items:center; gap:16px; position:relative; }
+
+.menu{
+  display:flex;
+  gap:8px;
+  list-style:none;
+  margin:0;
+  padding:8px;
+  position:relative;
+  align-items:center;
+}
+.menu-item{
+  position:relative;
+}
+.menu-item a{
+  display:inline-block;
+  text-decoration:none;
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:600;
+  color:var(--color-black);
+  transition: transform .25s ease, color .18s ease;
+}
+.menu-item a:focus,
+.menu-item a:hover{
+  transform: translateY(-4px);
+  color: var(--color-blue);
+  outline: none;
+}
+
+/* Animated indicator that slides under active item */
+.indicator{
+  position:absolute;
+  height:38px;
+  border-radius:10px;
+  background: linear-gradient(90deg, rgba(72,97,171,0.06), rgba(247,151,83,0.06));
+  transform: translateX(0);
+  transition: width .26s cubic-bezier(.2,.9,.2,1), transform .26s cubic-bezier(.2,.9,.2,1);
+  pointer-events:none;
+  top:6px;
+  left:6px;
+  box-shadow: 0 6px 18px rgba(72,97,171,0.06);
+}
+
+/* Hamburger (mobile) */
+.hamburger{
+  display:none;
+  border:0;
+  background:transparent;
+  padding:6px;
+  margin-left:6px;
+}
+.hamburger-box{ display:inline-block; width:28px; height:18px; position:relative; }
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+  display:block;
+  position:absolute;
+  height:3px;
+  width:100%;
+  background:var(--color-black);
+  border-radius:2px;
+  transition: transform .3s ease, top .3s ease, opacity .3s ease;
+}
+.hamburger-inner{ top:50%; transform: translateY(-50%); }
+.hamburger-inner::before{ content:""; top:-8px; }
+.hamburger-inner::after{ content:""; top:8px; }
+
+/* Active hamburger toggled state */
+.hamburger[aria-expanded="true"] .hamburger-inner{ transform: rotate(45deg); }
+.hamburger[aria-expanded="true"] .hamburger-inner::before{ top:0; opacity:0; }
+.hamburger[aria-expanded="true"] .hamburger-inner::after{ transform: rotate(-90deg); top:0; }
+
+/* Hero */
+.hero{ padding:64px 0; display:grid; align-items:center; }
+.hero-inner{ display:flex; gap:36px; align-items:center; justify-content:space-between; }
+.hero-content{ max-width:620px; }
+.hero h1{
+  font-size:clamp(28px,4vw,44px);
+  margin:0 0 12px 0;
+  line-height:1.03;
+  color:var(--color-black);
+}
+.lead{ color:var(--muted); margin:0 0 18px 0; font-weight:500; }
+
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.btn:active{ transform: translateY(1px); }
+.btn-primary{
+  background: linear-gradient(90deg, var(--color-blue), var(--color-orange));
+  color:var(--color-white);
+  box-shadow: 0 8px 24px rgba(72,97,171,0.12);
+}
+.btn-ghost{
+  border:1px solid rgba(35,31,32,0.06);
+  color:var(--color-black);
+  background:transparent;
+}
+
+/* Hero animated pills */
+.hero-animation{ display:flex; gap:12px; align-items:center; justify-content:center; min-width:260px; }
+.pill{ width:86px; height:86px; border-radius:18px; box-shadow: 0 12px 40px rgba(35,31,32,0.06); transform: translateY(0); transition: transform .6s cubic-bezier(.2,.9,.2,1); }
+.pill.blue{ background: linear-gradient(180deg,var(--color-blue), #2f4fa8); transform-origin:center; }
+.pill.orange{ background: linear-gradient(180deg,var(--color-orange), #f3763b); transform-origin:center; }
+.pill.coral{ background: linear-gradient(180deg,var(--color-coral), #e45534); transform-origin:center; }
+.pill.blue:hover{ transform: translateY(-18px) rotate(-5deg) scale(1.04); }
+.pill.orange:hover{ transform: translateY(-18px) rotate(4deg) scale(1.04); }
+.pill.coral:hover{ transform: translateY(-18px) rotate(-3deg) scale(1.04); }
+
+/* Programs grid */
+.programs{ padding:48px 0 96px 0; }
+.section-title{ font-size:24px; margin:0 0 6px 0; }
+.section-sub{ color:var(--muted); margin:0 0 18px 0; }
+
+.cards-grid{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:18px;
+  margin-top:18px;
+}
+.program-card{
+  background:linear-gradient(180deg,#ffffff, #fbfdff);
+  border-radius:16px;
+  padding:18px;
+  min-height:180px;
+  box-shadow: 0 8px 30px rgba(35,31,32,0.04);
+  transition: transform .36s cubic-bezier(.2,.9,.2,1), box-shadow .36s ease;
+  outline:none;
+}
+.program-card:focus,
+.program-card:hover{
+  transform: translateY(-12px);
+  box-shadow: 0 22px 48px rgba(35,31,32,0.08);
+}
+.card-top{
+  display:inline-block;
+  font-weight:700;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(72,97,171,0.06);
+  font-size:13px;
+  margin-bottom:12px;
+}
+.card-link{ color:var(--color-blue); text-decoration:none; font-weight:700; }
+
+/* Footer */
+.site-footer{
+  border-top:1px solid rgba(35,31,32,0.04);
+  padding:18px 0;
+  color:var(--muted);
+}
+.footer-inner{ display:flex; justify-content:space-between; align-items:center; gap:12px; }
+
+/* ========== Responsive ========== */
+@media (max-width: 1024px){
+  .cards-grid{ grid-template-columns: repeat(2,1fr); }
+  .hero-inner{ flex-direction:column-reverse; gap:28px; align-items:center; text-align:center; }
+}
+@media (max-width: 720px){
+  .container{ padding:0 16px; }
+  .brand-text{ display:none; } /* keep logo compact */
+  .hamburger{ display:block; }
+  .menu{ 
+    position:fixed;
+    right:0;
+    top:0;
+    height:100dvh;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:64px 18px;
+    gap:14px;
+    width:320px;
+    transform: translateX(100%);
+    transition: transform .34s cubic-bezier(.2,.9,.2,1);
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));
+    box-shadow: -18px 0 50px rgba(35,31,32,0.06);
+  }
+  .menu-item a{ font-size:18px; padding:14px 8px; }
+  .menu.open{ transform: translateX(0); }
+  .indicator{ display:none; }
+  .cards-grid{ grid-template-columns: 1fr; }
+  .hero-animation{ min-width:unset; position:relative; display:flex; }
+}
+
+/* ========== Scrollbar styling ==========
+   Modern browsers use ::-webkit-scrollbar (Chromium/Safari).
+   Firefox has scrollbar-width; you can add further vendor rules if desired.
+================== */
+body::-webkit-scrollbar { width: 12px; height:12px; }
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-blue), var(--color-orange));
+  border-radius: 12px;
+  border: 3px solid rgba(255,255,255,0.6);
+}
+/* ===== Top Banner Header Image ===== */
+.top-banner {
+  position: relative;
+  width: 100%;
+  height: 65vh; /* adjust height (50–80vh) */
+  overflow: hidden;
+}
+
+.top-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.top-banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 10%;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(35,31,32,0.65) 0%, rgba(35,31,32,0.15) 100%);
+}
+
+.top-banner-overlay h1 {
+  font-size: clamp(32px, 6vw, 54px);
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+
+.top-banner-overlay p {
+  font-size: clamp(16px, 2vw, 22px);
+  max-width: 600px;
+  margin: 0;
+}
+
+body::-webkit-scrollbar-track { background: rgba(35,31,32,0.03); border-radius: 12px; }
+
+/* small utility */
+.hidden { display:none !important; }

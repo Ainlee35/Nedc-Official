@@ -1,0 +1,183 @@
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      scroll-behavior: smooth;
+      font-size: 1rem;
+      color: #333;
+    }
+    h1, h2, h3, h4, h5, h6, .navbar-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #2EC2DF;
+    }
+    p, li, a, button, input, textarea {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    /* Navbar Scroll Effect */
+    .navbar {
+      transition: background-color 0.4s ease, box-shadow 0.4s ease;
+      background-color: transparent !important;
+    }
+    .navbar.scrolled {
+      background-color: #ffffff !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .navbar .nav-link {
+      font-weight: 600;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0') center/cover no-repeat;
+      color: white;
+      padding: 140px 20px;
+      text-align: center;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.55);
+    }
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      animation: fadeInDown 1.5s;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      animation: fadeInUp 2s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .stat-card {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    .stat-card.show {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.8s ease;
+    }
+    .fade-section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+    .fade-section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .impact-section {
+      background: #2EC2DF; /* Custom brand color */
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      color: white;
+    }
+    .impact-section h2, .impact-section h3, .impact-section p {
+      color: #fff;
+    }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .social-icons a {
+      color: #ccc;
+      font-size: 1.2rem;
+      margin-right: 10px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #2EC2DF;
+    }
+    .quote-box {
+      background: #f1f5f9;
+      border-left: 5px solid #2EC2DF;
+      padding: 20px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+    .leader-img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%; /* Rounded frame */
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .leader-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .vision-mission-card, .core-value-card {
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .vision-mission-card:hover, .core-value-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    /* ===== Responsive Adjustments ===== */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .leader-img {
+        height: 180px;
+        width: 180px;
+      }
+      .impact-section h3 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero {
+        padding: 100px 15px;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 0.95rem;
+      }
+      .quote-box {
+        font-size: 0.9rem;
+        padding: 15px;
+      }
+      .impact-section h2 {
+        font-size: 1.5rem;
+      }
+      .impact-section h3 {
+        font-size: 1.5rem;
+      }
+      .leader-img {
+        height: 150px;
+        width: 150px;
+      }
+    }
+ 

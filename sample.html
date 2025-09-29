@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEDC Company Profile 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+    .hero {
+      background: linear-gradient(to right, #059669, #14b8a6);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      animation: fadeInDown 1.5s;
+    }
+    .hero p {
+      animation: fadeInUp 2s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .stat-card {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    .stat-card.show {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.8s ease;
+    }
+    .fade-section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+    .fade-section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success" href="#">NEDC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#about" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="#about">Vision & Mission</a></li>
+              <li><a class="dropdown-item" href="#about">Core Values</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#programs" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+            <ul class="dropdown-menu" aria-labelledby="programsDropdown">
+              <li><a class="dropdown-item" href="#programs">BongoFursa Show</a></li>
+              <li><a class="dropdown-item" href="#programs">Innovation Hub</a></li>
+              <li><a class="dropdown-item" href="#programs">Youth Insurance</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
+          <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+        
+      <h1>National Enterprise & Development Chamber</h1>
+      
+      <p class="lead mt-3">Turning wasted talent into national assets — supporting entrepreneurs with finance, markets, and mentorship.</p>
+      <a href="#programs" class="btn btn-light btn-lg mt-4">Explore Programs</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 fade-section">
+    <div class="container">
+      <h2 class="text-center mb-4">About NEDC</h2>
+      <p class="text-center">NEDC is a membership-based institution established to champion entrepreneurship, enterprise growth, and innovation in Tanzania. We ensure that no idea, no talent, and no dream is wasted.</p>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <h5>Vision</h5>
+          <p>A Tanzania where every entrepreneur has the opportunity, resources, and support to build enterprises that create jobs and drive innovation.</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Mission</h5>
+          <p>Close the gap between the haves and have-nots by connecting entrepreneurs to finance, markets, skills, and policy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs" class="py-5 bg-light fade-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Flagship Programs</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm stat-card">
+            <div class="card-body">
+              <h5 class="card-title">BongoFursa TV Pitch Show</h5>
+              <p class="card-text">A national televised show where entrepreneurs pitch to investors and secure mentorship and funding.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm stat-card">
+            <div class="card-body">
+              <h5 class="card-title">Innovation Hub</h5>
+              <p class="card-text">A co-working and incubation hub where startups can test ideas and grow.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm stat-card">
+            <div class="card-body">
+              <h5 class="card-title">Youth Insurance</h5>
+              <p class="card-text">An innovative safety net protecting youth entrepreneurs from shocks and risks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Section -->
+  <section id="membership" class="py-5 fade-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Membership Plans</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="stat-card text-center shadow-sm">
+            <h5>Silver</h5>
+            <p class="fw-bold">TZS 100,000 / year</p>
+            <p>Startups and youth-led businesses</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card text-center shadow-sm">
+            <h5>Gold</h5>
+            <p class="fw-bold">TZS 750,000 / year</p>
+            <p>SMEs and growing companies</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card text-center shadow-sm">
+            <h5>Platinum</h5>
+            <p class="fw-bold">TZS 2,000,000 / year</p>
+            <p>Corporates and strategic partners</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section id="impact" class="py-5 bg-light fade-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Impact</h2>
+      <div class="row text-center g-4">
+        <div class="col-md-3">
+          <div class="stat-card shadow-sm">
+            <h3 class="counter" data-target="50000">0</h3>
+            <p>Jobs Enabled</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card shadow-sm">
+            <h3 class="counter" data-target="10000">0</h3>
+            <p>MSMEs Formalized</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card shadow-sm">
+            <h3 class="counter" data-target="120">0</h3>
+            <p>Finance Mobilized (Billion TZS)</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card shadow-sm">
+            <h3 class="counter" data-target="30000">0</h3>
+            <p>Entrepreneurs Trained</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 fade-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <form class="mx-auto" style="max-width:600px">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+        </div>
+        <button class="btn btn-success w-100">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>NEDC</h5>
+          <p>National Enterprise & Development Chamber</p>
+        </div>
+        <div class="col-md-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#membership">Membership</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6>Contact</h6>
+          <p>Email: info@nedc.or.tz</p>
+          <p>Phone: +255 700 123 456</p>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <small>© 2025 NEDC - All Rights Reserved</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-section, .stat-card').forEach(el => observer.observe(el));
+
+    // Animated counters
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // smaller = faster
+
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          const updateCount = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = Math.ceil(target / speed);
+
+            if(count < target){
+              counter.innerText = count + increment;
+              setTimeout(() => updateCount(counter), 20);
+            } else {
+              counter.innerText = target.toLocaleString();
+            }
+          };
+          updateCount(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
+
+    counters.forEach(c => counterObserver.observe(c));
+  </script>
+</body>
+</html>

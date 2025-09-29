@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Board - NEDC</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="STYLED.css" rel="stylesheet">
+
+  <style>
+    .section-separator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 50px 0;
+      position: relative;
+    }
+    .section-separator span {
+      background: #2EC2DF; /* NEDC brand blue */
+      color: white;
+      padding: 8px 20px;
+      font-weight: 600;
+      border-radius: 30px;
+      z-index: 1;
+    }
+    .section-separator::before,
+    .section-separator::after {
+      content: "";
+      flex: 1;
+      border-bottom: 2px solid #2EC2DF;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+    
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success d-flex align-items-center" href="index.html">
+        <img src="nedc_lg-removebg-preview.png" alt="NEDC Logo" style="height:50px; margin-right:10px;">
+        NEDC
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <!-- About Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#about" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item color-hover" href="about new.html">Vision & Mission</a></li>
+              <li><a class="dropdown-item color-hover" href="board new.html">Board & Advisory Council</a></li>
+            </ul>
+          </li>
+
+          <!-- Programs Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#programs" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+            <ul class="dropdown-menu" aria-labelledby="programsDropdown">
+              <li><a class="dropdown-item color-hover" href="programs.html">BongoFursa Show</a></li>
+              <li><a class="dropdown-item color-hover" href="programs.html">BongoFursa App</a></li>
+              <li><a class="dropdown-item color-hover" href="programs.html">Innovation Hub</a></li>
+              <li><a class="dropdown-item color-hover" href="programs.html">Youth Insurance</a></li>
+              <li><a class="dropdown-item color-hover" href="programs.html">Innovation Awards</a></li>
+              <li><a class="dropdown-item color-hover" href="programs.html">BLY Syllabus</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link color-hover" href="Membership form.html">Membership</a></li>
+          <!--<li class="nav-item"><a class="nav-link color-hover">Events</a></li>
+          <li class="nav-item"><a class="nav-link color-hover">Documents</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero d-flex align-items-center justify-content-center">
+    <div class="container text-center text-white fade-section">
+      <h1 class="fw-bold about-title">Our Leadership</h1>
+    </div>
+  </section>
+
+  <!-- Leadership Section -->
+  <section class="py-5 fade-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Leadership</h2>
+      <div class="row g-4">
+        
+        <!-- Example Leadership Member -->
+        <div class="col-md-4">
+          <div class="card text-center shadow-sm about-card">
+            <img src="ceo.jpg" alt="CEO" class="card-img-top rounded-circle p-3 leader-img">
+            <div class="card-body">
+              <h5 class="fw-bold">John Doe</h5>
+              <p class="text-muted">Chief Executive Officer</p>
+              <p>“NEDC is more than an institution; it is a movement to transform Tanzania’s entrepreneurial landscape.”</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Repeat More Leaders -->
+        <div class="col-md-4">
+          <div class="card text-center shadow-sm about-card">
+            <img src="director1.jpg" alt="Director" class="card-img-top rounded-circle p-3 leader-img">
+            <div class="card-body">
+              <h5 class="fw-bold">Jane Smith</h5>
+              <p class="text-muted">Director of Programs</p>
+              <p>“Empowering youth and women through innovation and enterprise.”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card text-center shadow-sm about-card">
+            <img src="director2.jpg" alt="Director" class="card-img-top rounded-circle p-3 leader-img">
+            <div class="card-body">
+              <h5 class="fw-bold">Michael Brown</h5>
+              <p class="text-muted">Director of Finance</p>
+              <p>“Creating sustainable economic impact through smart finance.”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card text-center shadow-sm about-card">
+            <img src="director3.jpg" alt="Director" class="card-img-top rounded-circle p-3 leader-img">
+            <div class="card-body">
+              <h5 class="fw-bold">Sarah Lee</h5>
+              <p class="text-muted">Director of Innovation</p>
+              <p>“We bridge technology with enterprise for growth.”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card text-center shadow-sm about-card">
+            <img src="director4.jpg" alt="Director" class="card-img-top rounded-circle p-3 leader-img">
+            <div class="card-body">
+              <h5 class="fw-bold">David Kim</h5>
+              <p class="text-muted">Director of Strategy</p>
+              <p>“Strategic partnerships drive long-term change.”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card text-center shadow-sm about-card">
+            <img src="director5.jpg" alt="Director" class="card-img-top rounded-circle p-3 leader-img">
+            <div class="card-body">
+              <h5 class="fw-bold">Linda Green</h5>
+              <p class="text-muted">Director of Capacity Building</p>
+              <p>“Investing in people ensures a resilient future.”</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Separator -->
+<div class="section-separator">
+  <span>Board of Directors</span>
+</div>
+
+<!-- Board of Directors Section -->
+<section id="board" class="py-5 fade-section bg-light">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Benedict Ishabakaki -->
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm about-card">
+          <img src="chairman.png" alt="Benedict Ishabakaki" class="card-img-top rounded-circle p-3 leader-img">
+          <div class="card-body">
+            <h5 class="fw-bold">Mr. Benedict Ishabakaki</h5>
+            <p class="text-muted">Chairperson of the Board</p>
+            <p>Advocate of the High Court & Subordinate Courts of Tanzania</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Said Mwema -->
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm about-card">
+          <img src="mwema.png" alt="Said Mwema" class="card-img-top rounded-circle p-3 leader-img">
+          <div class="card-body">
+            <h5 class="fw-bold">Mr. Said Mwema</h5>
+            <p class="text-muted">Board Member</p>
+            <p>Former Inspector General of Police (IGP), Tanzania</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Juma Mkomi -->
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm about-card">
+          <img src="juma.jpg" alt="Juma Mkomi" class="card-img-top rounded-circle p-3 leader-img">
+          <div class="card-body">
+            <h5 class="fw-bold">Mr. Juma Mkomi</h5>
+            <p class="text-muted">Board Member</p>
+            <p>Principal Secretary, President’s Office – Public Service Management and Good Governance</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gilead Teri -->
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm about-card">
+          <img src="terri.JPG" alt="Gilead Teri" class="card-img-top rounded-circle p-3 leader-img">
+          <div class="card-body">
+            <h5 class="fw-bold">Mr. Gilead Teri</h5>
+            <p class="text-muted">Board Member</p>
+            <p>Director General, Tanzania Investment and Special Economic Zones Authority (TISEZA)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tully Esther Mwambapa -->
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm about-card">
+          <img src="tully.png" alt="Tully Esther Mwambapa" class="card-img-top rounded-circle p-3 leader-img">
+          <div class="card-body">
+            <h5 class="fw-bold">Ms. Tully Esther Mwambapa</h5>
+            <p class="text-muted">Board Member</p>
+            <p>Managing Director, CRDB Bank Foundation & Director of Corporate Affairs, CRDB Bank Plc</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Edwin Urasa -->
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm about-card">
+          <img src="edwin.png" alt="Edwin Urasa" class="card-img-top rounded-circle p-3 leader-img">
+          <div class="card-body">
+            <h5 class="fw-bold">Mr. Edwin Urasa</h5>
+            <p class="text-muted">Board Member</p>
+            <p>CEO & Executive Director, Creditinfo Tanzania</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rainer Ndibalema -->
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm about-card">
+          <img src="rainer.jpg" alt="Rainer Ndibalema" class="card-img-top rounded-circle p-3 leader-img">
+          <div class="card-body">
+            <h5 class="fw-bold">Mr. Rainer Ndibalema</h5>
+            <p class="text-muted">Board Secretary</p>
+            <p>CEO, Uniworld Ltd</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>NEDC</h5>
+          <p>National Enterprise & Development Chamber</p>
+        </div>
+        <div class="col-md-4">
+          <h6>Quick Links</h6>
+                <ul class="list-unstyled">
+  <li><a href="about new.html" class="text-white color-hover">About Us</a></li>
+  <li><a href="programs.html" class="text-white color-hover">Programs</a></li>
+  <li><a href="board new.html" class="text-white color-hover">Board & Advisory Council</a></li>
+  <li><a href="index.html#membership" class="text-white color-hover">Membership</a></li>
+  <li><a href="index.html#impact" class="text-white color-hover">Impact</a></li>
+  <li><a href="index.html#contact" class="text-white color-hover">Contact</a></li>
+</ul>
+        </div>
+        <div class="col-md-4">
+          <h6>Contact</h6>
+          <p>Email: info@nedc.or.tz</p>
+          <p>Phone: +255654 700 444</p>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <small>© 2025 NEDC - All Rights Reserved</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="sciptd.js"></script>
+</body>
+</html>

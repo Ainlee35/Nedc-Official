@@ -1,0 +1,86 @@
+{
+  "site": {
+    "title": "National Enterprise & Development Chamber (NEDC)",
+    "tagline": "Shaping the next Tanzania — no dream wasted",
+    "logo": "images/nedc-logo.jpg"
+  },
+  "header": {
+    "title": "National Enterprise & Development Chamber (NEDC)",
+    "subtitle": "A platform where entrepreneurs access finance, skills, markets and mentorship.",
+    "image": "images/hero.jpg",
+    "source": "Foreword / Founder & Executive Director (Jesse Stephen Madauda). :contentReference[oaicite:5]{index=5}"
+  },
+  "about": {
+    "vision": "A Tanzania where every entrepreneur has the opportunity, resources, and support to build enterprises that create jobs, drive innovation, and contribute to a sustainable and inclusive national economy.",
+    "mission": "Close the gap between the haves and have-nots; strengthen SMEs and startups through access to finance, markets, skills and technology; promote green and blue economy; champion gender equality and youth empowerment.",
+    "coreValues": ["Integrity","Inclusivity","Innovation","Collaboration","Sustainability","Excellence","Impact"],
+    "source": "Vision, Mission & Core Values. :contentReference[oaicite:6]{index=6}"
+  },
+  "leadership": [
+    {
+      "name": "Jesse Stephen Madauda",
+      "title": "Founder & Executive Director",
+      "img": "images/jesse-madauda.jpg",
+      "bio": "Founder & Executive Director — authored the foreword and leads the Executive Secretariat." ,
+      "source": "Foreword / Founder & Executive Director. :contentReference[oaicite:7]{index=7}"
+    },
+    {
+      "name": "Benedict Ishabakaki",
+      "title": "Chairperson of the Board",
+      "img": "images/benedict-ishabakaki.jpg",
+      "bio": "Chairman of the Board. Provides governance oversight and public confidence.",
+      "source": "Message from the Chairman of the Board. :contentReference[oaicite:8]{index=8}"
+    }
+  ],
+  "programs": [
+    {
+      "id": 1,
+      "title": "BongoFursa Televised Pitch Show",
+      "summary": "National TV pitch show connecting entrepreneurs with investors and mentors. (Target: 1,000 entrepreneurs pitched; 150+ funded in three years).",
+      "source": "Programs — BongoFursa Show. :contentReference[oaicite:9]{index=9}"
+    },
+    {
+      "id": 2,
+      "title": "BongoFursa App (Digital Platform)",
+      "summary": "Mobile & web app connecting entrepreneurs to finance, mentors, jobs and markets. Target: 100,000 active users by 2028.",
+      "source": "Programs — BongoFursa App. :contentReference[oaicite:10]{index=10}"
+    },
+    {
+      "id": 3,
+      "title": "NEDC Innovation Hub",
+      "summary": "Physical & virtual incubation space for startups and SMEs (target: support 500 startups).",
+      "source": "Programs — Innovation Hub. :contentReference[oaicite:11]{index=11}"
+    },
+    {
+      "id": 4,
+      "title": "From Idea to Business (Training)",
+      "summary": "Practical training program to turn ideas into viable businesses (20,000 youth trained in 3 years).",
+      "source": "Programs — From Idea to Business. :contentReference[oaicite:12]{index=12}"
+    },
+    {
+      "id": 5,
+      "title": "NEDC Youth Insurance",
+      "summary": "Insurance product to protect youth entrepreneurs from shocks (target: 50,000 youth insured).",
+      "source": "Programs — Youth Insurance. :contentReference[oaicite:13]{index=13}"
+    },
+    {
+      "id": 6,
+      "title": "National Innovation Awards",
+      "summary": "Annual awards that recognize top entrepreneurs and connect winners to investors and media.",
+      "source": "Programs — Innovation Awards. :contentReference[oaicite:14]{index=14}"
+    },
+    {
+      "id": 7,
+      "title": "Business Literacy for Youth (BLY) Syllabus",
+      "summary": "Entrepreneurship curriculum rolled out in colleges and vocational centers (target: 50 institutions & 30,000 students).",
+      "source": "Programs — BLY Syllabus. :contentReference[oaicite:15]{index=15}"
+    }
+  ],
+  "contact": {
+    "headquarters": "National Enterprise and Development Chamber (NEDC), Dar es Salaam, Tanzania",
+    "email": "info@nedc.or.tz",
+    "website": "https://www.nedc.or.tz",
+    "portal": "https://portal.nedc.or.tz",
+    "source": "Contact & HQ information. :contentReference[oaicite:16]{index=16}"
+  }
+}
